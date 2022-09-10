@@ -1,0 +1,344 @@
+
+
+/* CSS reset yapıldı. */
+
+  *{
+    margin:0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:13px;
+  }
+
+
+  /* header flex yapıldı ve tüm elemanlar justify-content:flex end ile en sona atıldı  */
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* elemanlar arasında 1.4rem boşluk verildi.  */
+    gap:1.4rem;
+
+    /* iç boşluk olarak 1 rem verildi.  */
+    padding:1rem;
+
+
+  }
+
+
+  .header_links{
+    /* linklerin alt çizgileri kaldırıldı. yazı rengi siyah yapıldı. hafif soluklaştırmak için opacity değeri 0.85 yapıldı */
+    text-decoration: none;
+    color:black;
+    opacity:0.85;
+
+  }
+
+
+  /* linklerin üzerine gelince alt çizgi eklenmesi için text-decoration underline yapıldı.  */
+  .header_links:hover{
+    text-decoration:underline;
+    
+  }
+
+
+  /* dokuz nokta sembolünün üzerine gelince yuvarlak taban oluşması için içine konulan a elementinin genişlik ve yüksekliği 40px yapıldı. border-radius 50% verilerek daire şeklini alması sağlandı. flex ile svg ortalandı. cursor pointer ile mouse imleci üstüne gelince el simgesinin oluşması sağlandı.*/
+  .apps_icon_cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color:rgb(114, 113, 113);
+    width:40px;
+    height: 40px;
+    cursor:pointer;
+
+  }
+
+  /* dokuz nokta sembolünün üstüne gelince -- hover -- taban rengi değişimi sağlandı.  */
+  .apps_icon_cover:hover{
+    background-color:rgb(230, 230, 230);
+  
+  }
+
+    /* dokuz nokta sembolü ne 16pxlik yükseklik ve genişlik verildi. rengi ayarlandı. */
+.apps_icon{
+  width: 16px;
+  height: 16px;
+  color:rgb(87, 85, 85);
+
+}
+
+/* kullanıcı resmi daire yapıldı. mouse imleçi el simgesi yapıldı. 32px yükseklik ve genişlik verildi.  */
+.user_photo{
+  border-radius: 50%;
+  cursor:pointer;
+  width: 32px;
+  height: 32px;
+
+  
+}
+
+/* kullanıcı resminin üstüne mouse gelince gölge efekti eklendi.  */
+.user_photo:hover{
+
+  box-shadow: 0px 0px 0px 4px rgb(0,0,0,0.06);
+  
+}
+
+
+
+/* arama input ve butonlarının yer aldığı main kısmı flex yapıldı. flex-direction:column ile dikey yönde hizalanmaları sağlandı.  */
+
+main{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+
+/* arama elemanları tek bir dive alındı. bu dizin kenarları yuvarlatıldı. 1px lik border verildi. padding ayarlandı. tabanda diğer butonlardan ayrılması için margin-bottom verildi.  */
+.input_entry{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(228,228,228);
+  border-radius: 100vh;
+  padding: 0.6rem 1.2rem;
+  /* gap:0.25rem; */
+  margin-top:2rem;
+
+}
+
+/* üzerine gelince kenarlarına gölge eklenmesi için box-shadow eklendi.  */
+.input_entry:hover{
+  box-shadow: 0px 1px 6px 1px rgba(32,33,36, 0.15);
+}
+
+/* arama çubuğunun en soluna büyüteç simgesi eklendi.  */
+.search_icon{
+  width:22px;
+  color:rgb(194, 190, 190);
+
+}
+
+
+/* aranan yazının yazılacağı input elementi hazırlandı. bugünün google sayfası ile uyumlu olması için full ekran genişliği 440px olarak verildi. border kaldırıldı. iç boşluk verildi. outline kaldırıldı. */
+.search_input{
+  width:440px;
+  border: none;
+  padding: 0.5rem;
+  font-size:16px;
+  outline:none;
+  margin-right: 1.5rem;
+  
+
+}
+
+/* klavye ikon resmi 20px genişliğe ayarlandı. sağ tarafındaki sesli arama simgesi ile arasının açılması için margin-right 1.5rem yapıldı. */
+.keyboard_icon{
+  width:20px;
+  color:rgb(194, 190, 190);
+  margin-right: 1.5rem;
+  cursor:pointer;
+}
+
+
+
+
+
+/* sesli arama simgesinin genişliği 24px yapıldı.  */
+.microphone{
+  width:24px;
+  color:rgb(194, 190, 190);
+  cursor:pointer;
+}
+
+
+/* arama butonlarının yer aldığı alana yukarıdan ve aşağıdan yeterli boşluk vermek için margin 2.3 rem X 0 rem olarak uygulandı. gap:1rem verilerek butonların arası açıldı.  */
+.btnsCover{
+  margin: 2.3rem 0rem;
+  display: flex;
+  gap:1rem;
+}
+
+
+/* butonların özellikleri atandı. outline kaldırıldı. border-radius 5px verilip köşeler yuvarlatıldı. user-select none ile butonlar üzerindeki yazıların seçilmesi engellendi. border 1px transparent olarak verildiki daha sonra hover yapılınca eklenecek olan border sayfa yapısını bozmasın. */
+.btns{
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: rgb(248,249,250);
+  outline: none;
+  padding: 0.8rem 1.3rem;
+  border:1px solid transparent;
+  user-select: none;
+  cursor:pointer;
+  /* color:rgb(32,33,36); */
+  color:#3c4043;
+
+  
+
+
+}
+
+/* butonlar hover olunca üzerlerine 1px lik border verildi. ayrıca aşağı yönde 1pxlik gölge eklendi.  */
+.btns:hover{
+  border:1px solid rgb(218, 217, 217);
+  box-shadow: 0px 1px 0px 0px rgb(218, 217, 217);
+}
+
+.languagechoice{
+  font-size: 12px;
+  color:#3c4043;
+}
+
+/* dil seşimi alanındaki a elementinin alt çizgisi kaldırıldı.  */
+.langchoose{
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: 0.5rem;
+
+}
+/* dil seşimi alanındaki a elementine hover olunca  alt çizgi eklendi..  */
+.langchoose:hover{
+  text-decoration: underline;
+  
+}
+
+
+
+.leaf_icon{
+  width:12px;
+  color:rgb(194, 190, 190);
+}
+
+
+
+footer{
+  width:100%;
+  background-color: #f2f2f2;
+  color: #70757a;
+
+  /* footer alanını tabana yapıştırmak için position absolute kullanıldı. bottom 0px ve left 0px ile tam tabana yanaştırıldı.  */
+  position:absolute;
+  bottom:0px;
+  left:0px;
+
+}
+
+
+/* footer içindeki üst kısma iç boşluk - padding verilerek alan genişletildi. üst kısım ile alt kısım arasında ayrım gözükmesi içinde border-bottom 1px solid verildi.  */
+.top{
+  font-size: 15px;
+  padding: 1.3rem 2.6rem;
+  border-bottom: 1px solid rgb(228,228,228);
+}
+
+
+.bottom{
+
+  /* flex - justify-content:space between yapılarak içirideki alanların arasına gerekli boşluk konuldu. flex wrap ile ekran boyutunun küçülmesi durumunda iç divlerin kendi görüntülerini bozmadan aşağı satıra geçmesi sağlandı. */
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+
+  padding: 1.3rem 3rem;
+  
+}
+
+
+.left{
+  /* flex yapıldı. içerideki anchorlar arasına gap ile 2.2rem boşluk verildi. en az ekranın %30'unu kaplaması için min-width:30% yapıldı. order değeri 1 yapılarak flexin en başa bu divi alması sağlandı.  */
+  display: flex;
+  align-items: center;
+  gap:2.2rem;
+  min-width:30%;
+  order:1;
+
+}
+
+
+.middle{
+  /* flex yapıldı. order:2 verilerek bu divin 2. sıraya konması sağlandı. resim ve anchor arasında 5px boşluk olması için gap değeri:5px verildi. */
+  display: flex;
+  align-items: center;
+  order:2;
+  gap:5px;
+
+}
+
+.right{
+    /* flex yapıldı. içerideki anchorlar arasına gap ile 2.2rem boşluk verildi. en az ekranın %30'unu kaplaması için min-width:30% yapıldı. order değeri 3 yapılarak flexin en başa bu divi alması sağlandı.  */
+
+  display: flex;
+  align-items: center;
+  gap:2.2rem;
+  min-width:30%;
+  display: flex;
+  justify-content: end;
+  order:3;
+
+}
+
+
+/* footer içindeki bütün anchorların alt çizgisi kaldırıldı.  */
+.footer_link{
+  color: grey;
+  text-decoration: none;
+  font-size: 15px;
+
+}
+
+/* footer içindeki bütün anchorlar hover olunca  alt çizgi eklendi.  */
+.footer_link:hover{
+  text-decoration: underline;
+
+}
+
+/* 1100px altında sayfa yapısının değişmesi @media etiketi ile ayar yapıldı.  */
+@media all and (max-width:1100px){
+
+  /* footer'ın alt bölümünün padding değerleri değiştirildi. yukarıdan ve aşağıdan padding değerleri 0rem yapılarak ekran daralması durumunda boşlukların orantılı olması sağlandı.  */
+  .bottom{
+    padding: 0rem 3rem;
+  }
+
+  /* middle divinin google orijinal saufasında olduğu gibi aradan çıkıp üst tarafa gelmesi için order değeri 0 yapıldı. flexin bu divi başa taşıması sağlandı. width: 100% verilerek de üst kısma çıkınca tüm alanı kalaması sağlandı. */
+  .middle{
+    order:0;
+    width:100%;
+    justify-content: center;
+    padding: 1rem 0rem;
+  
+  }
+
+  /* gerekli padding ayarları yapıldı ve orantısız boşluk oluşması engellendi. flex-grow:1 ile daralma durumunda genişliğin otomatik artması sağlandı. */
+  .left{
+    justify-content: center;
+    flex-grow: 1;
+    padding: 1rem 0rem;
+    white-space: nowrap;
+  
+  }
+
+
+   /* gerekli padding ayarları yapıldı ve orantısız boşluk oluşması engellendi. flex-grow:1 ile daralma durumunda genişliğin otomatik artması sağlandı. */
+  .right{
+    justify-content: center;
+    flex-grow: 1;
+    padding: 1rem 0rem;
+  
+  }
+
+  /* arama yazısının yazıldığı input'un uzunluğunun ekran genişliğinin yüzde 53'ü olması sağlandı. */
+  .search_input{
+    width:53vw;
+    
+  }
+
+
+}
